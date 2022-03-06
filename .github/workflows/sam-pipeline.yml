@@ -16,6 +16,7 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           aws-region: us-east-1
+          role-skip-session-tagging: true
 
       # sam build 
       - run: sam build --use-container
